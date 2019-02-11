@@ -1,0 +1,68 @@
+
+@import 'block.scss';
+
+.docs-page-cont{
+  //border:5px solid red;
+  height: 92vh;
+  box-sizing: border-box;
+}
+
+  .docs-page-nav-cont{
+    //border:5px solid green;
+    height: 92vh;
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    border-right: 2px solid $color-grey;
+    border-top: 2px solid $color-grey;
+    overflow: auto;
+  }
+
+  .docs-page-router-cont{
+    border:5px solid purple;
+    height: 92vh;
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+    //border-top: 2px solid $color-grey;
+    overflow:auto;
+  }
+
+  //nav
+
+  .docs-page-nav-sub-2-cont{
+    //border:5px solid red;
+    border-bottom: 2px solid $color-grey;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: $font-brand;
+    text-transform: capitalize;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color:$color-brand-red;
+  }
+
+    .docs-page-nav-sub-2-title{
+      font-size: 20px;
+    }
+
+    .docs-page-nav-sub-2-title:hover{
+      color:$color-green;
+      cursor: pointer;
+    }
+
+    .docs-page-nav-sub-2-sub-cont{
+      font-size: 18px;
+      padding-left: 10px;
+    }
+
+      .docs-page-nav-sub-2-sub-tag{
+        padding: 5px;
+      }
+
+      .docs-page-nav-sub-2-sub-tag:hover{
+        color:$color-green;
+        cursor: pointer;
+        border:2px solid $color-grey;
+      }

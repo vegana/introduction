@@ -1,0 +1,84 @@
+
+
+.loader-cont{
+  position: absolute;
+  //height: 100vh;
+  //width: 100vw;
+  //border:5px solid red;
+  box-sizing: border-box;
+}
+
+  .loader-back{
+    height: 99vh;
+    width: 99vw;
+    top:0;
+    left:0;
+    //border:5px solid green;
+    position: fixed;
+    opacity: 0.2;
+  }
+
+  .loader-box{
+    height: 14vh;
+    width: 30vw;
+    position: fixed;
+    top:35vh;
+    left:35vw;
+    background-color: white;
+    box-sizing: border-box;
+  }
+
+    .loader-box-animate{
+      //border:5px solid red;
+      background-color: inherit;
+      height: 100%;
+      width: 40%;
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .loader-box-text{
+      //border:5px solid purple;
+      background-color: inherit;
+      height: 100%;
+      width: 60%;
+      float: left;
+      box-sizing: border-box;
+      font-size: 32px;
+      font-family: $font-brand;
+      color:$color-brand-red;
+      text-align: center;
+      padding-top: 4vh;
+    }
+
+    @media screen and (max-width:480px){
+      .loader-box{
+        width: 70vw;
+        left:15vw;
+      }
+      .loader-box-text{
+        padding-top: 5vh;
+        font-size: 24px;
+      }
+    }
+
+  //animation
+
+  .loader-loading{
+    margin: auto;
+    margin-top: 3vh;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid $color-brand-red;
+    border-bottom: 8px solid $color-brand-red;
+    width: 6vh;
+    height: 6vh;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    background-color: $color-candy;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

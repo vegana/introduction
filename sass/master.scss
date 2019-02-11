@@ -1,0 +1,31 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f4f4f4;
+}
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Nova+Round|Lobster|Rajdhani');
+
+//colors
+$color-brand-red: #9E1818;
+$color-grey: #e2e2e2;
+$color-candy: #ff003b;
+
+$color-light-grey: #f4f4f4;
+
+$color-green: #27ae60;
+$color-blue: #41c4f4;
+
+//fonts
+$font-brand: 'Nova Round';
+$font-heading: 'Lobster';
+$font-text: 'Rajdhani';
+
+//files
+@import "common.scss";
+
+//folder indexes
+@import "comps/index.scss";
+@import "pages/index.scss";

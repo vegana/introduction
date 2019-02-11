@@ -1,0 +1,26 @@
+
+
+p {
+  margin-top: 10px;
+}
+
+// .comp{
+//   max-height: 10000px;
+//   border:5px solid yellow;
+//   box-sizing: border-box;
+// }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.bg-color-green{
+  background-color: $color-green;
+  
+}
+
+.bg-color-blue{
+  background-color: $color-blue;
+}

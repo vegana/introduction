@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "aboutPage",
+    "communityPage",
+    "docsPage"
+  ],
+  "conts": {
+    "docsPage": [
+      "installCont",
+      "clineCont",
+      "newProjectCont",
+      "serveCont",
+      "buildCont"
+    ]
+  },
+  "panels": {},
+  "sass": []
+}

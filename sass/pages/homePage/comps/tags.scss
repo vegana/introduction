@@ -1,0 +1,31 @@
+
+
+.home-page-tags-cont{
+  border-top:1px solid $color-grey;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+  .home-page-tag-cont{
+    //border:2px solid green;
+    float: left;
+    width: 33.33%;
+    height: 100px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+    .home-page-tag-image{
+      //width: 80%;
+      height: 80%;
+    }
+
+    .home-page-tag-title{
+      font-family: $font-brand;
+      font-size: 24px;
+      //color:$color-candy;
+      text-transform: capitalize;
+    }
