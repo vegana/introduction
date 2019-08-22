@@ -1,0 +1,20 @@
+[
+  {
+    "type":"section",
+    "title":"Serve the Project Generated",
+    "items":[
+      {
+        "type":"para",
+        "string":"this command starts a server and compiles the app files and serves a built app to the browser. Vegana use the port 5566 to start the server at and currently cannot use any other port please make sure the port is not in use while you serve the app."
+      },
+      {
+        "type":"para",
+        "string":"this app listens for file changes in the app directory and re buods the app as nessesery. the app is optimized to reload only the compoent rebuild you should not have any issue with the optimization either.the bundle served is non optimized for faster builds and does not represent the final bundle size."
+      },
+      {
+        "type":"code",
+        "string":"$ vegana serve"
+      }
+    ]
+  }
+]

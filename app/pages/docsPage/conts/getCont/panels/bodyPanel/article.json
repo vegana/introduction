@@ -1,0 +1,30 @@
+[
+  {
+    "type":"section",
+    "title":"Get Body Width Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api returns the body width in pixels."
+      },
+      {
+        "type":"code",
+        "string":"const width = engine.body.width()"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Get Body Height Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api returns the body height in pixels."
+      },
+      {
+        "type":"code",
+        "string":"const height = engine.body.height()"
+      }
+    ]
+  }
+]

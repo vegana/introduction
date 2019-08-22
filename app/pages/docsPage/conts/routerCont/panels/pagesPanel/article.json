@@ -1,0 +1,24 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Page Router",
+    "items":[
+      {
+        "type":"para",
+        "string":"Page Modules are routed within the page-router div which is pre-generated on the html file please dont delete this div or any other div for that matter. the pages api noly works if atleast one page was initiated by the main index file in the app directory. page can either to routed in its old form (if previously built) or rebuilt if needed be. the api takes the module and data which you want to pass to the module, data can also be shared with the data api you can read about it ahead."
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.to.page(mod,{test:true})"
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.new.page(mod,{test:true})"
+      },
+      {
+        "type":"para",
+        "string":"here the given mod is the module which can be fetched by the get api,you will read about it ahead. any data can be passed and be taken in the init function of the new page as an argument after the predefined agruments of the function."
+      },
+    ]
+  }
+]

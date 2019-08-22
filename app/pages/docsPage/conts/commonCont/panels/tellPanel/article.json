@@ -1,0 +1,20 @@
+[
+  {
+    "type":"section",
+    "title":"Tell Common Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"error api takes a string as an input and returns false as boolean which can further be used to return from a function and catch a error."
+      },
+      {
+        "type":"code",
+        "string":"engine.common.tell('form_submitted-text-form',true) //will print"
+      },
+      {
+        "type":"code",
+        "string":"engine.common.tell('form_submitted-text-form',false) //will not print"
+      }
+    ]
+  }
+]

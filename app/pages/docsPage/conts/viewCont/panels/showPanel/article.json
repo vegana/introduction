@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Show View Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api simply takes element id as string for an arguments and shows it by setting its display to block."
+      },
+      {
+        "type":"code",
+        "string":"engine.view.show(div_id)"
+      }
+    ]
+  }
+]

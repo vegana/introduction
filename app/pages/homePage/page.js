@@ -1,33 +1,19 @@
-//controllers
 const log = false;
 const type = 'page';
 
-//ids
 const pageId = "page-home";
 const pageName = 'homePage';
-const menuComp = require('../comps/menuComp/comp');
-const footerComp = require('../comps/footerComp/comp');
-const glob = require('./global');
 
-let featuresCont;
-
-//init page
 const init = () => {
-  engine.make.init.page(pageId,"page");  //init page
-  build();                               //start build
+  engine.make.init.page(pageId,"page");
+  build();
 }
 
-//build page
 async function build(){
 
-  glob.init();
-
-  engine.set.pageTitle('Vegana Home || Introduction || git || npm || contact || twitter');
-
-  menuComp.init(pageId);
+  engine.global.comp.menuComp.init(pageId);
 
   const intro = require('./comps/introComp/comp');
-
   intro.init(pageId);
 
   engine.make.div({
@@ -37,71 +23,70 @@ async function build(){
     text:'Features'
   });
 
-  featuresCont = engine.make.div({
+  const featuresCont = engine.make.div({
     id:'features',
     parent:pageId,
     class:'home-page-features-cont'
   });
 
-  feature({
-    id:'cli',
-    image:'assets/images/cli.png',
-    title:'Node js Cli',
-    comment:'Native Node js Cli makes development and code management easy.'
-  });
+    feature(featuresCont,{
+      id:'cli',
+      image:'assets/images/cli.png',
+      title:'Node js Cli',
+      comment:'Native Node js Cli makes development and code management easy.'
+    });
 
-  feature({
-    id:'documents',
-    image:'assets/images/lazy.png',
-    title:'Defined Components Structure',
-    comment:'Vegana components Structure reduces overall bundle size increases loading times upto 100%, easy code management and usefull for giant teams.'
-  });
+    feature(featuresCont,{
+      id:'documents',
+      image:'assets/images/lazy.png',
+      title:'Defined Components Structure',
+      comment:'Vegana components Structure reduces overall bundle size increases loading times upto 100%, easy code management and usefull for giant teams.'
+    });
 
-  feature({
-    id:'read',
-    image:'assets/images/read.png',
-    title:'Code Redability',
-    comment:'Defined components structure makes the code super easy to understand for new devs.'
-  });
+    feature(featuresCont,{
+      id:'read',
+      image:'assets/images/read.png',
+      title:'Code Redability',
+      comment:'Defined components structure makes the code super easy to understand for new devs.'
+    });
 
-  feature({
-    id:'sass',
-    image:'assets/images/sass.png',
-    title:'Native Sass Support',
-    comment:'Sass is implimented without any document structure thank me later for it.'
-  });
+    feature(featuresCont,{
+      id:'sass',
+      image:'assets/images/sass.png',
+      title:'Native Sass Support',
+      comment:'Sass is implimented without any document structure thank me later for it.'
+    });
 
-  feature({
-    id:'html',
-    image:'assets/images/html.png',
-    title:'Native Dom Elements',
-    comment:'Only JS HTML elements makes demelopment faster and minimizes code, making development faster.'
-  });
+    feature(featuresCont,{
+      id:'html',
+      image:'assets/images/html.png',
+      title:'Native Dom Elements',
+      comment:'Only JS HTML elements makes demelopment faster and minimizes code, making development faster.'
+    });
 
-  feature({
-    id:'tools',
-    image:'assets/images/tools.png',
-    title:'Native tools for Api, Auth and Local Database.',
-    comment:'Native tools makes Auth , Api calls ,Local Data Management and lots other super easy, just try it.'
-  });
+    feature(featuresCont,{
+      id:'tools',
+      image:'assets/images/tools.png',
+      title:'Native tools for Api, Auth and Local Database.',
+      comment:'Native tools makes Auth , Api calls ,Local Data Management and lots other super easy, just try it.'
+    });
 
   const tags = require('./comps/tagsComp/comp');
-
   tags.init(pageId);
 
-  footerComp.init(pageId);
+  engine.global.comp.footerComp.init(pageId);
 
 }
 
-function feature(data){
+function feature(p,data){
 
-  let holder = engine.make.div({
+  const holder = engine.make.div({
     id:data.id,
-    parent:featuresCont,
+    parent:p,
     class:'home-page-feature-cont'
   });
 
-  let cont = engine.make.div({
+  const cont = engine.make.div({
     id:data.id,
     parent:holder,
     class:'home-page-feature-box'
@@ -114,7 +99,7 @@ function feature(data){
       text:data.title
     });
 
-    let imageCont = engine.make.div({
+    const imageCont = engine.make.div({
       id:'imgCont',
       parent:cont,
       class:'home-page-feature-image-cont'
@@ -137,8 +122,7 @@ function feature(data){
 
 }
 
-//do not change current exports you are free to add your own though.
-let pageControllers = {
+const pageControllers = {
   init:init,
   ref:pageId,
   type:type,

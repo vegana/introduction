@@ -1,0 +1,180 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Input Api's",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api makes different kind of inputs. each input type takes function and triggers on there unique events."
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana String Input",
+    "items":[
+      {
+        "type":"para",
+        "string":"string input function is triggered on input and takes arguments of id and value, the value will be returned false if is not a string.value given to the api is optional, the default class is form-input."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"form-div",
+          "class":"whatever-class #optional #default='form-input'",
+          "type":"string",
+          "value":"sample string #optional",
+          "style":"border:5px solid red; #optional",
+          "function":"triggered on input this function submits two arguments id and value"
+        }
+      },
+      {
+        "type":"code",
+        "string":"const inputId = engine.make.input(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana Number Input",
+    "items":[
+      {
+        "type":"para",
+        "string":"number input function is triggered on input and takes arguments of id and value, the value will be returned false if is not a number.value given to the api is optional and should be a valid int, the default class is form-input."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"form-div",
+          "class":"whatever-class #optional #default='form-input'",
+          "type":"number",
+          "value":420,
+          "style":"border:5px solid red; #optional",
+          "function":"triggered on input this function submits two arguments id and value"
+        }
+      },
+      {
+        "type":"code",
+        "string":"const inputId = engine.make.input(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana File Input",
+    "items":[
+      {
+        "type":"para",
+        "string":"File api takes all the supported native html5 arguments. the function is triggered on file selection and takes two arguments is and files where files is an array of native file object type for html5."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"form-div",
+          "class":"whatever-class #optional #no_default",
+          "function":"triggered on input this function submits two arguments id and files"
+        }
+      },
+      {
+        "type":"code",
+        "string":"const inputId = engine.make.upload(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana Make Textarea",
+    "items":[
+      {
+        "type":"para",
+        "string":"his api generates a resizable html textbox which can be attckahed with functions and events and takes the following argements the function works same as the inputs."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"form-div",
+          "class":"whatever-class #optional #no_default",
+          "function":"triggered on input this function submits two arguments id and value"
+        }
+      },
+      {
+        "type":"code",
+        "string":"const inputId = engine.make.textarea(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana Make Button",
+    "items":[
+      {
+        "type":"para",
+        "string":"value is the text given to the button default class is form-button and function triggers on click."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"form-div",
+          "class":"button-class #optional #default='form-input'",
+          "value":"this button",
+          "function":"triggered on click and takes if as an argument for the function."
+        }
+      },
+      {
+        "type":"code",
+        "string":"const inputId = engine.make.button(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana Make Select",
+    "items":[
+      {
+        "type":"para",
+        "string":"the given value shoudl match one of the value of options and is optional, options items schema is defined below functions cannot be attached with the options but with the whole select dom element. no events can be given either."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"form-div",
+          "class":"whatever-class #optional #default='form-select'",
+          "function":"triggered on click this function submits two arguments id and value",
+          "value":"option_two #optional",
+          "options":[
+            {"text":"option 1","value":"option_one","disabled":true,"class":"ux #optional #default='form-select-item'"},
+            {"text":"option 2","value":"option_two","disabled":false},
+            {"text":"option 3","value":"option_three"},
+          ]
+        }
+      },
+      {
+        "type":"code",
+        "string":"const inputId = engine.make.select(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana Make Checkbox",
+    "items":[
+      {
+        "type":"para",
+        "string":"checkbox is simple takes the function and triggers on click with arguments of id and value, which can is false when is un-selected. given value should be a valid boolean."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"form-div",
+          "class":"whatever-class #optional #default='form-checkbox'",
+          "function":"triggered on click this function submits two arguments id and value",
+          "value":true
+        }
+      },
+      {
+        "type":"code",
+        "string":"const inputId = engine.make.checkbox(properties)"
+      }
+    ]
+  }
+]

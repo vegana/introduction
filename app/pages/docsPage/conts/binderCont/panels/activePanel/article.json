@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Active Binder",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is very straight forward it takes id of a checkbox dom element and returns the state of that element as a boolean."
+      },
+      {
+        "type":"code",
+        "text":"engine.binder.active(check_box_id)"
+      }
+    ]
+  }
+]

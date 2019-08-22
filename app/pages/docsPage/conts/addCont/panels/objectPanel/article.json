@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Add Object",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api add an object to the central data sharing system and can be used to temporarly hold data which can be shared inbetween modules."
+      },
+      {
+        "type":"code",
+        "text":"engine.add.object('user_object',{username:'akku'})"
+      }
+    ]
+  }
+]

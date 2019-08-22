@@ -1,68 +1,63 @@
 
-@import 'block.scss';
 
-.docs-page-cont{
-  //border:5px solid red;
-  height: 92vh;
-  box-sizing: border-box;
+.cont{
+  min-height: 92vh;
+  background-color: white !important;
 }
 
-  .docs-page-nav-cont{
-    //border:5px solid green;
-    height: 92vh;
-    width: 20%;
-    float: left;
-    box-sizing: border-box;
-    border-right: 2px solid $color-grey;
-    border-top: 2px solid $color-grey;
-    overflow: auto;
-  }
+@import './comps/index.scss';
 
-  .docs-page-router-cont{
-    border:5px solid purple;
-    height: 92vh;
-    width: 80%;
-    float: left;
-    box-sizing: border-box;
-    //border-top: 2px solid $color-grey;
-    overflow:auto;
-  }
+.page-docs-router-cont{
+  height: 92vh;
+  overflow: auto;
+  width: 80%;
+  float: right;
+  border: 1px solid $color-grey;
+}
 
-  //nav
+.page-docs-nav{
+  height: 92vh;
+  overflow: auto;
+  width: 20%;
+  float: right;
+  border: 1px solid $color-grey;
+}
 
-  .docs-page-nav-sub-2-cont{
-    //border:5px solid red;
+  .page-docs-nav-box{
+    //border: 5px solid red;
     border-bottom: 2px solid $color-grey;
-    box-sizing: border-box;
-    width: 100%;
-    font-family: $font-brand;
-    text-transform: capitalize;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    color:$color-brand-red;
   }
 
-    .docs-page-nav-sub-2-title{
-      font-size: 20px;
-    }
-
-    .docs-page-nav-sub-2-title:hover{
-      color:$color-green;
+    .page-docs-nav-box-tag{
+      font-size: 24px;
+      font-family: $font-heading;
+      color: $color-brand-red;
+      text-transform: capitalize;
+      padding: 10px;
       cursor: pointer;
     }
 
-    .docs-page-nav-sub-2-sub-cont{
-      font-size: 18px;
-      padding-left: 10px;
+    .page-docs-nav-box-tag:hover{
+      color:$color-green;
     }
 
-      .docs-page-nav-sub-2-sub-tag{
+    .page-docs-nav-box-panels{
+
+    }
+
+      .page-docs-nav-box-panel{
         padding: 5px;
+        font-size: 18px;
+        font-family: $font-brand;
+        color: $color-brand-red;
+        text-transform: capitalize;
+        cursor: pointer;
+        padding-left: 2vw;
+        text-decoration: none;
+        display: block;
+        border: 0px;
       }
 
-      .docs-page-nav-sub-2-sub-tag:hover{
-        color:$color-green;
-        cursor: pointer;
-        border:2px solid $color-grey;
+      .page-docs-nav-box-panel:hover{
+        color:$color-candy;
       }

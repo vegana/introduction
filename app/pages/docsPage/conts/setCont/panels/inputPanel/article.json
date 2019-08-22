@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Set Input Value Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api simply changes input elemenst value and takes id and value as arguments."
+      },
+      {
+        "type":"code",
+        "string":"engine.set.input.value(input_element_id,'vegana js')"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "type":"section",
+    "title":"Build the Project",
+    "items":[
+      {
+        "type":"para",
+        "string":"this app builds a optimized version of you app with app the lazy components integrated in the build folder the build folder is now ready to be deployed to any server.the code generated cannot be used for further generated so please keep you app sources code backed up for future development."
+      },
+      {
+        "type":"para",
+        "string":"Build command takes the domain name as input and configures the index file to load the js and other resources from the same."
+      },
+      {
+        "type":"code",
+        "string":"$ vegana build https://vegana.github.io"
+      }
+    ]
+  }
+]

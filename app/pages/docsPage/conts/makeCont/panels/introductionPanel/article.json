@@ -1,0 +1,12 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Make Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"these apis make html dom and vegana elements. each make api returns a id of the dom element and takes all the available html properties as input with unique vegana properties for triggering functions on element specific events, styling, cron jobs, viewership etc."
+      }
+    ]
+  }
+]

@@ -6,37 +6,45 @@ const type = 'page';
 const pageId = "page-docs";
 const pageName = 'docsPage';
 
-const menuComp = require('../comps/menuComp/comp');
-const footerComp = require('../comps/footerComp/comp');
-
 const blockComp = require('./comps/blockComp/comp');
-const paraComp = require('./comps/paraComp/comp');
-const titleComp = require('./comps/titleComp/comp');
+const articleComp = require('./comps/articleComp/comp');
 
 let navCont,routerCont,contRouter;
 
 //init page
-const init = () => {
+const init = (is_new) => {
   engine.make.init.page(pageId,"page");  //init page
-  build();                               //start build
+  build(is_new);                               //start build
 }
 
+const trackers = {
+  title:'Vegana Docs',
+  meta:[
+    {
+      name:'keywords',
+      content:'vegana,docs,tutorial,introduction'
+    },
+    {
+      name:'description',
+      content:'Vegana framework docs help new and old users to learn how to use vegana apis to build a ui based app for web and other native platforms.'
+    }
+  ]
+};
+
 //build page
-function build(){
+function build(is_new){
 
   engine.add.comp('block',blockComp);
-  engine.add.comp('title',titleComp);
-  engine.add.comp('para',paraComp);
+  engine.add.comp('articleComp',articleComp);
 
-  engine.set.pageTitle('Vegana Book || Learn Vegana || Docs Latest');
-  menuComp.init(pageId);
-  make();
+  engine.global.comp.menuComp.init(pageId);
+  make(is_new);
   //footerComp.init(pageId);
   return true;
 
 }
 
-function make(){
+function make(is_new){
 
     navCont = engine.make.div({
       id:'nav',
@@ -44,91 +52,261 @@ function make(){
       class:'docs-page-nav-cont'
     });
 
-      contRouter = engine.router.init.conts(pageId,'docs-page-router-cont');
+      contRouter = engine.router.init.conts(pageId,'page-docs-router-cont');
 
       const introduction = require('./conts/introductionCont/cont');
-      introduction.init(contRouter);
+      if(!is_new){
+        introduction.init(contRouter);
+      }
 
-    make_nav_two(test_data_nav_two);
+      const nav_cont = engine.make.div({
+        parent:pageId,
+        class:'page-docs-nav'
+      });
 
-}
+    engine.global.function.loader().show();
 
-let test_data_nav_two = {
-  title:{
-    tag:'introduction',
-    cont:'introductionCont'
-  },
-  sub:[
-    {tag:'Installation',cont:'installCont'},
-    {tag:'Vegana CLI',cont:'clineCont'},
-    {tag:'New Project',cont:'newProjectCont'},
-    {tag:'Serve Project',cont:'serveCont'},
-    {tag:'Build Project',cont:'buildCont'}
-  ]
-};
-
-function route(cont){
-
-  if(!engine.get.contModule(pageName,cont)){
-
-    engine.loader.load.cont(pageName,cont)
-    .then(()=>{
-      console.log('loaded');
-      engine.router.navigate.to.cont(engine.get.contModule(pageName,cont));
-    })
-    .catch((error)=>{
-      console.log(error);
-    });
-
-  } else {
-    engine.router.navigate.to.cont(engine.get.contModule(pageName,cont));
-  }
+    setTimeout(function () {
+      let natives = engine.params.native.get();
+      engine.global.function.loader().hide();
+      if(natives.cont){
+        make_side_nav(nav_cont,natives.cont);
+      } else {
+        make_side_nav(nav_cont,'introductionCont');
+      }
+    }, 500);
 
 }
 
-function make_nav_two(data){
+function make_side_nav(p,active){
 
-  let cont = engine.make.div({
-    id:engine.uniqid(),
-    parent:navCont,
-    class:'docs-page-nav-sub-2-cont'
+  const cont = engine.make.div({
+    parent:p,
+    //class:'page-docs-nav'
   });
 
-    engine.make.div({
-      id:engine.uniqid(),
-      parent:cont,
-      class:'docs-page-nav-sub-2-title',
-      text:data.title.tag,
-      function:()=>{
-        route(data.title.cont);
+    for(let b in tree){
+      let a = false;
+      if(tree[b].cont == active){
+        a = true;
       }
-    });
-
-    let subCont = engine.make.div({
-      id:engine.uniqid(),
-      parent:cont,
-      class:'docs-page-nav-sub-2-sub-cont'
-    });
-
-      for(var i=0;i<data.sub.length;i++){
-
-        let sub = data.sub[i];
-
-        engine.make.div({
-          id:engine.uniqid(),
-          parent:subCont,
-          class:'docs-page-nav-sub-2-sub-tag',
-          text:sub.tag,
-          function:()=>{
-            route(sub.cont);
-          }
-        });
-
-      }
+      make_box(cont,tree[b],a,p);
+    }
 
 }
 
+function make_box(p,box,active,sup){
 
+  const this_box = engine.make.div({
+    parent:p,
+    class:'page-docs-nav-box'
+  });
+
+    let tag_text = box.tag;
+    if(!active){
+      tag_text += ' &#8681;';
+    }
+
+    engine.make.div({
+      parent:this_box,
+      class:'page-docs-nav-box-tag',
+      text:tag_text,
+      function:async ()=>{
+        engine.global.to_panel = false;
+        await engine.global.function.toLazyCont('docsPage',box.cont);
+        engine.view.remove(p);
+        make_side_nav(sup,box.cont);
+      }
+    });
+
+    if(!active){
+      return;
+    }
+
+    const panels = engine.make.div({
+      parent:this_box,
+      class:'page-docs-nav-box-panels',
+    });
+
+    for(let p of box.panels){
+
+      engine.global.function.makeAButton({
+        parent:panels,
+        class:'page-docs-nav-box-panel',
+        text:p.tag,
+        type:'local',
+        page:'docsPage',
+        cont:box.cont,
+        panel:p.mod
+      });
+
+    }
+
+}
+
+const tree = {
+  introduction:{
+    tag:'introduction',
+    cont:'introductionCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'installtion',mod:'installationPanel'},
+      {tag:'document structure',mod:'document-treePanel'}
+    ]
+  },
+  cli:{
+    tag:'cli',
+    cont:'cliCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'init',mod:'initPanel'},
+      {tag:'serve',mod:'servePanel'},
+      {tag:'generate',mod:'generatePanel'},
+      {tag:'build',mod:'buildPanel'},
+      {tag:'founder',mod:'founderPanel'},
+      {tag:'help',mod:'helpPanel'},
+    ]
+  },
+  make:{
+    tag:'make',
+    cont:'makeCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'div',mod:'divPanel'},
+      {tag:'list',mod:'listPanel'},
+      {tag:'image',mod:'imagePanel'},
+      {tag:'input',mod:'inputPanel'}
+    ]
+  },
+  router:{
+    tag:'router',
+    cont:'routerCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'pages',mod:'pagesPanel'},
+      {tag:'conts',mod:'contsPanel'},
+      {tag:'panels',mod:'panelsPanel'},
+      {tag:'comps',mod:'compsPanel'}
+    ]
+  },
+  loader:{
+    tag:'loader',
+    cont:'loaderCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'load',mod:'loadPanel'},
+      {tag:'css',mod:'cssPanel'},
+      {tag:'hooks',mod:'hooksPanel'}
+    ]
+  },
+  request:{
+    tag:'request',
+    cont:'requestCont',
+    panels:[
+      {tag:'send',mod:'sendPanel'},
+    ]
+  },
+  binder:{
+    tag:'binder',
+    cont:'binderCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'hover',mod:'hoverPanel'},
+      {tag:'click',mod:'clickPanel'},
+      {tag:'files',mod:'filesPanel'},
+      {tag:'text',mod:'textPanel'},
+      {tag:'number',mod:'numberPanel'},
+      {tag:'value',mod:'valuePanel'},
+      {tag:'active',mod:'activePanel'},
+      {tag:'boolean',mod:'booleanPanel'},
+    ]
+  },
+  add:{
+    tag:'add',
+    cont:'addCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'object',mod:'objectPanel'},
+      {tag:'function',mod:'functionPanel'},
+      {tag:'comp',mod:'compPanel'}
+    ]
+  },
+  common:{
+    tag:'common',
+    cont:'commonCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'tell',mod:'tellPanel'},
+      {tag:'error',mod:'errorPanel'}
+    ]
+  },
+  data:{
+    tag:'data',
+    cont:'dataCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'get',mod:'getPanel'},
+      {tag:'set',mod:'setPanel'},
+      {tag:'reset',mod:'resetPanel'}
+    ]
+  },
+  get:{
+    tag:'get',
+    cont:'getCont',
+    panels:[
+      {tag:'page',mod:'pagePanel'},
+      {tag:'cont',mod:'contPanel'},
+      {tag:'panel',mod:'panelPanel'},
+      {tag:'body',mod:'bodyPanel'}
+    ]
+  },
+  meta:{
+    tag:'meta',
+    cont:'metaCont',
+    panels:[
+      {tag:'add',mod:'addPanel'},
+      {tag:'update',mod:'updatePanel'},
+      {tag:'delete',mod:'deletePanel'}
+    ]
+  },
+  params:{
+    tag:'params',
+    cont:'paramsCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'get',mod:'getPanel'},
+      {tag:'add',mod:'addPanel'},
+      {tag:'delete',mod:'deletePanel'},
+      {tag:'native',mod:'nativePanel'}
+    ]
+  },
+  set:{
+    tag:'set',
+    cont:'setCont',
+    panels:[
+      {tag:'title',mod:'titlePanel'},
+      {tag:'input',mod:'inputPanel'},
+      {tag:'div',mod:'divPanel'}
+    ]
+  },
+  validate:{
+    tag:'validate',
+    cont:'validateCont',
+    panels:[
+      {tag:'introduction',mod:'introductionPanel'},
+      {tag:'json',mod:'jsonPanel'},
+      {tag:'email',mod:'emailPanel'}
+    ]
+  },
+  view:{
+    tag:'view',
+    cont:'viewCont',
+    panels:[
+      {tag:'hide',mod:'hidePanel'},
+      {tag:'show',mod:'showPanel'}
+    ]
+  }
+};
 
 //do not change current exports you are free to add your own though.
 let pageControllers = {
@@ -137,7 +315,8 @@ let pageControllers = {
   type:type,
   name:pageName,
   contModules:{},
-  contList:{}
+  contList:{},
+  trackers:trackers
 };
 module.exports = pageControllers;
 window.pageModules[pageName] = pageControllers;

@@ -3,10 +3,11 @@
   margin: 0px;
   padding: 0px;
   background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
 //fonts
-@import url('https://fonts.googleapis.com/css?family=Nova+Round|Lobster|Rajdhani');
+@import url('https://fonts.googleapis.com/css?family=Nova+Round|Alegreya|Muli');
 
 //colors
 $color-brand-red: #9E1818;
@@ -20,12 +21,13 @@ $color-blue: #41c4f4;
 
 //fonts
 $font-brand: 'Nova Round';
-$font-heading: 'Lobster';
-$font-text: 'Rajdhani';
+$font-heading: 'Muli';
+$font-text: 'Alegreya';
 
 //files
 @import "common.scss";
 
 //folder indexes
+@import "common/index.scss";
 @import "comps/index.scss";
 @import "pages/index.scss";

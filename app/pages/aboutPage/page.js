@@ -6,9 +6,6 @@ const type = 'page';
 const pageId = "page-about";
 const pageName = 'aboutPage';
 
-const menuComp = require('../comps/menuComp/comp');
-const footerComp = require('../comps/footerComp/comp');
-
 //init page
 const init = () => {
   engine.make.init.page(pageId,"page");  //init page
@@ -18,17 +15,13 @@ const init = () => {
 //build page
 function build(){
 
-  engine.common.tell('building',log);
-
-  engine.set.pageTitle('About Vegana || A brief introduction to Vegana');
-
-  menuComp.init(pageId);
+  engine.global.comp.menuComp.init(pageId);
 
   body();
 
-  footerComp.init(pageId);
+  engine.global.comp.footerComp.init(pageId);
 
-  return true; //always return after the build completes
+  return true;
 
 }
 

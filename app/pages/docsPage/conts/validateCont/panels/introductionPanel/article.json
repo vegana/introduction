@@ -1,0 +1,12 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Router Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"Validate apis are sepcifially designed and optimized to validate json as object and email as a string which might be the most important functions as per the security around a web app. caution :- we do not exit html special characters."
+      }
+    ]
+  }
+]

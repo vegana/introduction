@@ -26,28 +26,19 @@ const init = (pid) => {                                                //pid = p
 
 }
 
-//build the cont dom here
 function build(){
-
-  engine.global.comp.title.init(contId,
-    'Welcome to the community.'
-  );
-
-  engine.global.comp.para.init(contId,
-    'Vegana is a js framework for single page web apps and use native Nodejs enviorment for development, ' +
-    'to get a better sense of the enviorments features you must take the following course in full. ' +
-    'Before getting started the developer must posses basic knowledge of Javascript,Sass,Css and Html.'
-  );
-
+  engine.router.init.panels(contId);
+  if(!engine.global.to_panel){
+    engine.global.function.toLazyPanel('docsPage','introductionCont','cliPanel');
+  }
 }
 
-//do not change current exports you are free to add your own though.
 const contControllers = {
   init:init,
   ref:contRef,
   type:type,
   contName:contName,
-  panelModules:{},        //dont fill this object, imported panels are loaded automatically.
+  panelModules:{},        
   panelList:{}
 };
 

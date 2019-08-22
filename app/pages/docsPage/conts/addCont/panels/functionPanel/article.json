@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Add Function",
+    "items":[
+      {
+        "type":"para",
+        "string":"his api add an object to the central data sharing system and can be used to temporarly hold data which can be shared inbetween modules."
+      },
+      {
+        "type":"code",
+        "text":"engine.add.function('user_object',()=>{console.log('hello');}))"
+      }
+    ]
+  }
+]

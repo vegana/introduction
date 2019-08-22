@@ -1,0 +1,20 @@
+[
+  {
+    "type":"section",
+    "title":"Set Data Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api takes 2 arguments of key and storage location and fetches the data if it exists."
+      },
+      {
+        "type":"code",
+        "text":"const result = engine.data.get('user_info',local)"
+      },
+      {
+        "type":"para",
+        "string":"possible storage locations would be local,session or mem (temporary)"
+      }
+    ]
+  }
+]

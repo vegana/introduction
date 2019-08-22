@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Hover Binder",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is very straight forward it takes id and function as arguments and the function is triggered when the dom element is hoverred upon."
+      },
+      {
+        "type":"code",
+        "text":"engine.binder.hover(superDiv,()=>{<br>&nbsp;&nbsp;console.log('clicked');<br>})"
+      }
+    ]
+  }
+]

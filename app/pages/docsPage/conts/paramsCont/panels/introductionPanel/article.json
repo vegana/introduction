@@ -1,0 +1,12 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Params Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"these apis are specificaly designed to help devs manipulate the url quickly and with minimal code for better deep linking within the app the url is a powerfull tool for frontend frameworks since user can to to specif places in your app with the url and thus special arrangements are to be made for this purpose for example user wants to read an article about snow boards you can make a url of https://exmaple.com/articles/snow-borad-2019 to point to the paticles page and show the specific article."
+      }
+    ]
+  }
+]

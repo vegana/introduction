@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Initiate a new Project",
+    "items":[
+      {
+        "type":"para",
+        "string":"Vegana help commands displays all the active actions the cli app can do by proviving the additional commands."
+      },
+      {
+        "type":"code",
+        "string":"$ vegana help"
+      }
+    ]
+  }
+]

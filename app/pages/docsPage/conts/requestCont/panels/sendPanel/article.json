@@ -1,0 +1,28 @@
+[
+  {
+    "type":"section",
+    "title":"Loader Css Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is a async wraper around the html 5 fetch api which is now supported by all the major browsers. basic thought behind the wrapper is that any future changes can be settled and configured to your app without any code changes. this api takes a object with properties of url, body and headers, where body can be a json object and headers are needed to be a jons object with header type as key and header property as a value."
+      },
+      {
+        "type":"code",
+        "json":{
+          "url":"whatever-box",
+          "headers":{
+            "Content-Type":"application/json"
+          },
+          "body":{
+            "test":true
+          }
+        }
+      },
+      {
+        "type":"code",
+        "string":"const result = await engine.request(properties)"
+      }
+    ]
+  }
+]

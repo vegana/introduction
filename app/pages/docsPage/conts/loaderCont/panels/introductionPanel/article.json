@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Make Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"Loader api is async and loads the lazy pages,conts,comps or panels with any other js and css and also provide hooks which are to be called when a specific module is loaded."
+      },
+      {
+        "type":"para",
+        "string":"the api is distributed into 3 sections load,css and hook, load section provides sub apis to load all the js files including pages,conts,panels and comps. Css sub api loads lazy css and hooks provide functionality to call  a function when a module is loaded."
+      }
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "type":"section",
+    "title":"Hook Comp",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api hooks a lazy comp for when it is loaded into the app, given the comp is lazy and is loaded via the loader.load api. this api takes the comp name and function within an object as an argument."
+      },
+      {
+        "type":"code",
+        "json":{
+          "comp":"comp-name",
+          "function":"function that you want to be triggered",
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.loader.hook.comp(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Hook Page",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api hooks a lazy page for when it is loaded into the app, given the page is lazy and is loaded via the loader.load api. this api takes the page name and function within an object as an argument."
+      },
+      {
+        "type":"code",
+        "json":{
+          "page":"page-name",
+          "function":"function that you want to be triggered",
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.loader.hook.page(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Hook Cont",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api hooks a lazy cont for when it is loaded into the app, given the cont is lazy and is loaded via the loader.load api. this api takes the page, cont names and function within an object as an argument."
+      },
+      {
+        "type":"code",
+        "json":{
+          "page":"page-name",
+          "cont":"cont-name",
+          "function":"function that you want to be triggered",
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.loader.hook.cont(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Hook Panel",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api hooks a lazy panel for when it is loaded into the app, given the panel is lazy and is loaded via the loader.load api. this api takes the page, cont, panel names and function within an object as an argument."
+      },
+      {
+        "type":"code",
+        "json":{
+          "page":"page-name",
+          "cont":"cont-name",
+          "panel":"panel-name",
+          "function":"function that you want to be triggered",
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.loader.hook.panel(properties)"
+      }
+    ]
+  }
+]

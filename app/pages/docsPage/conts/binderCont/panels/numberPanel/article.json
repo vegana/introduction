@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Number Binder Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is very straight forward it takes id as a arguments and returns a number if is available or else it returns false as a boolean. this api only binds the number input dom element."
+      },
+      {
+        "type":"code",
+        "text":"const number = engine.binder.number(input_number_element_id)"
+      }
+    ]
+  }
+]

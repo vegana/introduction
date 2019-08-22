@@ -1,0 +1,79 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Make List",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api makes a html list and takes the following arguments. item class will be applied to all the items unless a unique class is provided with the item. Class in the main object is applied to the whole list."
+      },
+      {
+        "type":"code",
+        "json":{
+          "parent":"parent-cont-id",
+          "class":"image-class #no_default #optional",
+          "itemClass":"image-class #default='list-item' #optional",
+          "data":[
+            {"id":"someId #optional","text":"item 1","function":null,"class":"unique-item-class #optional"},
+            {"text":"item 2"},
+            {"text":"item 3"},
+          ]
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.make.list(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana Make List-Items (Multiple)",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api adds additonal list items for a previously generated list."
+      },
+      {
+        "type":"code",
+        "json":{
+          "list_id":"parent-list",
+          "itemClass":"image-class #default='list-item' #optional",
+          "data":[
+            {"id":"someId #optional","text":"item 1","function":null,"class":"unique-item-class #optional"},
+            {"text":"item 2"},
+            {"text":"item 3"},
+          ]
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.make.listItems(properties)"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Vegana Make List-Item (Single)",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api adds one additonal list item for a previously generated list."
+      },
+      {
+        "type":"code",
+        "json":{
+          "id":"item-4 #optional",
+          "list_id":"parent-list",
+          "itemClass":"image-class #default='list-item' #optional",
+          "text":"item 4",
+          "function":"pass a function here"
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.make.listItem(properties)"
+      }
+    ]
+  }
+]

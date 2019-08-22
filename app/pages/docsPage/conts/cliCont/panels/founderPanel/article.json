@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Founder - About",
+    "items":[
+      {
+        "type":"para",
+        "string":"Vegana Founder provides contact infromation to quickly contact the development team."
+      },
+      {
+        "type":"code",
+        "string":"$ vegana founder"
+      }
+    ]
+  }
+]

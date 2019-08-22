@@ -25,6 +25,9 @@
       width: 80%;
       margin-top: 1vh;
       //border:3px solid purple;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
     }
 
   .links-cont{
@@ -46,7 +49,6 @@
         color:$color-brand-red;
         background-color: inherit;
         font-family: "Nova Round";
-        text-transform: capitalize;
         border:0px;
         font-size: 20px;
         width: 100%;
@@ -55,13 +57,19 @@
       }
 
       .links-button{
+        line-height: 2em;
+        display: inline-block;
+        padding-top: 1vh;
         background-color: inherit;
         font-family: "Nova Round";
-        text-transform: capitalize;
         border:0px;
         font-size: 20px;
         color:black;
         //border:3px solid purple;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        text-transform: capitalize;
       }
 
         .links-button:Hover{

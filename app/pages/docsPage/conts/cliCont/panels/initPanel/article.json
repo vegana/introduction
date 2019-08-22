@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Initiate a new Project",
+    "items":[
+      {
+        "type":"para",
+        "string":"this shell command generates the files required by the vegana framework in current working directory or the directory where you have called the command. in other words make the directory with project name and initiate the project inside the new directory."
+      },
+      {
+        "type":"code",
+        "string":"$ vegana init test"
+      }
+    ]
+  }
+]

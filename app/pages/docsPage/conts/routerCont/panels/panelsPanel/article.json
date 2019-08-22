@@ -1,0 +1,32 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Panel Router",
+    "items":[
+      {
+        "type":"para",
+        "string":"Panels module can be routed within the panel router which is to be defined on each cont. the router api routes the panel on the router of the active cont or the cont you last routed to. the api takes contId and class as arguments class is optional and there is no default provided."
+      },
+      {
+        "type":"code",
+        "string":"engine.router.init.panels(contId,'panel-router-class #optional')"
+      },
+      {
+        "type":"para",
+        "string":"now panels can be routed within this router by using the following api."
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.to.panel(mod,{test:true})"
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.new.panel(mod,{test:true})"
+      },
+      {
+        "type":"para",
+        "string":"here the given mod is the module which can be fetched by the get api,you will read about it ahead. any data can be passed and be taken in the init function of the panel module as an argument after the predefined agruments of the function."
+      },
+    ]
+  }
+]

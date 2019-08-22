@@ -1,0 +1,12 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana binder Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"vegana binder apis provide fast and easy way to attach a dom element to a dom event although only  a few events are directly supported with these apis but they make development very fast. the focus behind making them were to lower the developer time on typing code and making dveelopment a hell lot faster, with super easy error handling."
+      }
+    ]
+  }
+]

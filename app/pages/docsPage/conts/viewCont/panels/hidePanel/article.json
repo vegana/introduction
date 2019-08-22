@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Hide View Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api simply takes element id as string for an arguments and hides it by setting its display to none."
+      },
+      {
+        "type":"code",
+        "string":"engine.view.hide(div_id)"
+      }
+    ]
+  }
+]

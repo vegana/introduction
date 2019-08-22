@@ -1,0 +1,21 @@
+[
+  {
+    "type":"section",
+    "title":"Get Params Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api returns an object with the params key as the object ket the same relation of both the values of objects."
+      },
+
+      {
+        "type":"code",
+        "string":"const params = engine.params.get()"
+      },
+      {
+        "type":"code",
+        "string":"{id:'213124uyh} //returned"
+      }
+    ]
+  }
+]

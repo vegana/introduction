@@ -1,0 +1,21 @@
+[
+  {
+    "type":"section",
+    "title":"Install Vegana Js",
+    "items":[
+      {
+        "type":"para",
+        "string":"Vegana Js use Nodejs As a Development Enviorment and Npm as a code reposetory for code distribution, before getting started with vegana development you have to setup your developer enviorment follow the list below to do so."
+      },
+      {
+        "type":"list",
+        "items":[
+          "install node js here <a href='https://nodejs.org/en/download/'>Node Js</a>",
+          "make sure npm is installed.",
+          "install vegana as a global module : <pre>$ npm i --global vegana</pre>",
+          "check if vegana is installed globally : <pre>$ vegana check</pre>"
+        ]
+      }
+    ]
+  }
+]

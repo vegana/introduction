@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Set Page Title Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api simply changes the page title and takes a string as an argument."
+      },
+      {
+        "type":"code",
+        "string":"engine.set.pageTitle('super page')"
+      }
+    ]
+  }
+]

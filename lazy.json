@@ -6,13 +6,126 @@
   ],
   "conts": {
     "docsPage": [
-      "installCont",
-      "clineCont",
-      "newProjectCont",
-      "serveCont",
-      "buildCont"
+      "cliCont",
+      "makeCont",
+      "loaderCont",
+      "routerCont",
+      "validateCont",
+      "paramsCont",
+      "getCont",
+      "dataCont",
+      "setCont",
+      "addCont",
+      "requestCont",
+      "timeCont",
+      "metaCont",
+      "binderCont",
+      "commonCont",
+      "viewCont"
     ]
   },
-  "panels": {},
-  "sass": []
+  "panels": {
+    "docsPage": {
+      "introductionCont": [
+        "introductionPanel",
+        "installationPanel",
+        "document-treePanel",
+        "framework-structurePanel"
+      ],
+      "cliCont": [
+        "initPanel",
+        "servePanel",
+        "generatePanel",
+        "buildPanel",
+        "founderPanel",
+        "helpPanel",
+        "introductionPanel"
+      ],
+      "makeCont": [
+        "divPanel",
+        "introductionPanel",
+        "inputPanel",
+        "imagePanel",
+        "listPanel"
+      ],
+      "routerCont": [
+        "introductionPanel",
+        "pagesPanel",
+        "contsPanel",
+        "panelsPanel",
+        "compsPanel"
+      ],
+      "loaderCont": [
+        "introductionPanel",
+        "hooksPanel",
+        "cssPanel",
+        "loadPanel"
+      ],
+      "requestCont": [
+        "sendPanel"
+      ],
+      "binderCont": [
+        "hoverPanel",
+        "clickPanel",
+        "filesPanel",
+        "textPanel",
+        "numberPanel",
+        "valuePanel",
+        "activePanel",
+        "booleanPanel",
+        "introductionPanel"
+      ],
+      "addCont": [
+        "introductionPanel",
+        "objectPanel",
+        "functionPanel",
+        "compPanel"
+      ],
+      "commonCont": [
+        "introductionPanel",
+        "tellPanel",
+        "errorPanel"
+      ],
+      "dataCont": [
+        "introductionPanel",
+        "getPanel",
+        "setPanel",
+        "resetPanel"
+      ],
+      "getCont": [
+        "pagePanel",
+        "contPanel",
+        "panelPanel",
+        "bodyPanel"
+      ],
+      "metaCont": [
+        "addPanel",
+        "updatePanel",
+        "deletePanel"
+      ],
+      "paramsCont": [
+        "getPanel",
+        "addPanel",
+        "deletePanel",
+        "nativePanel",
+        "introductionPanel"
+      ],
+      "setCont": [
+        "titlePanel",
+        "divPanel",
+        "inputPanel"
+      ],
+      "validateCont": [
+        "jsonPanel",
+        "emailPanel",
+        "introductionPanel"
+      ],
+      "viewCont": [
+        "showPanel",
+        "hidePanel"
+      ]
+    }
+  },
+  "sass": [],
+  "globals": []
 }

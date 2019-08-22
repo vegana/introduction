@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Add Comp",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api takes the comp name and comp module and stores tehm into the module directory and can be used to fetch global comp anywhere in the app."
+      },
+      {
+        "type":"code",
+        "text":"engine.add.comp('formComp',compModule)"
+      }
+    ]
+  }
+]

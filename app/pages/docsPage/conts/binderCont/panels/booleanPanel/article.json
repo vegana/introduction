@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Boolean Binder",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is very straight forward it takes id of any dom element and returns the value as a boolean."
+      },
+      {
+        "type":"code",
+        "text":"engine.binder.boolean(select_element_id)"
+      }
+    ]
+  }
+]

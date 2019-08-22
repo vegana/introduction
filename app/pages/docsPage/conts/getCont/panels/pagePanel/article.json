@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Get Page Module Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api takes page name as a string for argument and fetches the page module if already is loaded in the app."
+      },
+      {
+        "type":"code",
+        "string":"const pageModule = engine.get.pageModule('homePage')"
+      }
+    ]
+  }
+]

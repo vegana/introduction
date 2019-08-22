@@ -1,0 +1,12 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Common Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"common apis provide logging functions which are customized for debugging. the api is distrubited into 2 sub apis error and tell api."
+      }
+    ]
+  }
+]

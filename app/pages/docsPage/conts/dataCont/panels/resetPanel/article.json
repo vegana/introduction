@@ -1,0 +1,20 @@
+[
+  {
+    "type":"section",
+    "title":"Set Data Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api takes 3 arguments of key, value and storage location and stores the data in the given storage is the kye already exists it overwrites the data if not it makes a new key."
+      },
+      {
+        "type":"code",
+        "text":"const result = engine.data.reset('user_info',{username:'nokku'},local)"
+      },
+      {
+        "type":"para",
+        "string":"possible storage locations would be local,session or mem (temporary)"
+      }
+    ]
+  }
+]

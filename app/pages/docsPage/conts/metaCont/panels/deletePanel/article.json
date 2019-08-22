@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Update Meta Information Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api takes the meta tag name as a string and deletes it from the dom it found to be there."
+      },
+      {
+        "type":"code",
+        "string":"engine.meta.delete('description')"
+      }
+    ]
+  }
+]

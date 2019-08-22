@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Loader Css Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api loads css files onto the app and takes filename as an argument caution this api does not load css files via url but only with file name of which the file is present in the css folder."
+      },
+      {
+        "type":"code",
+        "string":"engine.loader.css('vegana_native_style')<br>.then(()=>{<br>&nbsp;&nbsp;console.log('comp module loaded');<br>})<br>.catch((e)=>{<br>&nbsp;&nbsp;console.log(e);<br>})"
+      }
+    ]
+  }
+]

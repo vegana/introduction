@@ -1,0 +1,36 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Make Image",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api makes a image in the paren dom element, local images can be configured to work with nested domain addresses like a website hoted at www.example.com/yoursite/ with the base href api. all the local images should be located in the assets directory of the base app and location should be given without the domain name. Url Images can be used by setting the type to the url value."
+      },
+      {
+        "type":"code",
+        "json":{
+          "id":"image-box optional",
+          "parent":"parent-cont-id",
+          "class":"image-class optional",
+          "type":"local",
+          "location":"/assets/images/logo.png",
+        }
+      },
+      {
+        "type":"code",
+        "json":{
+          "id":"image-box optional",
+          "parent":"parent-cont-id",
+          "class":"image-class optional",
+          "type":"url",
+          "location":"https://example.com/assets/images/logo.png",
+        }
+      },
+      {
+        "type":"code",
+        "string":"const imageId = engine.make.image(properties)"
+      }
+    ]
+  }
+]

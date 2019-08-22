@@ -1,0 +1,20 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Router Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"vegana document structure is defined for the specific purpose of routing and lazyness. The document structure is tree like on top sits the page module which can be routed within the page router object to other pages this incapsulates the cont module which is the same and can be routed within the cont router this module encapsulated the panels module which is the very base of our document structure all of these modules are specificly designed to be lazy which mean they can le loaded onto the application whenever is required like contact page can be loaded when user wants to navigate to that page."
+      },
+      {
+        "type":"para",
+        "string":"Comp Module can also be routed but within its defined router object."
+      },
+      {
+        "type":"para",
+        "string":"Router is again distributed into 5 apis but only 1 is intended to be used by the users which is the navigation api rest of them are used by the vegana engine internally for routing."
+      }
+    ]
+  }
+]

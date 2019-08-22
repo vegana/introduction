@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Files Binder Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is very straight forward it takes id as a arguments and returns a array of files form the file input element on the dom."
+      },
+      {
+        "type":"code",
+        "text":"const files = engine.binder.files(file_element_id)"
+      }
+    ]
+  }
+]

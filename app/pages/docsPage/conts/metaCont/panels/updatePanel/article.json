@@ -1,0 +1,23 @@
+[
+  {
+    "type":"section",
+    "title":"Update Meta Information Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api takes a object as an argument with keys of name and content with there appropriate values. the key name will be used as a key for the meta tag and the contant will be used as a value for that tag to be produced caution :- this api will overwite a existing meta tag."
+      },
+      {
+        "type":"code",
+        "json":{
+          "name":"description",
+          "parent":"this is the new description.",
+        }
+      },
+      {
+        "type":"code",
+        "string":"engine.meta.update(properties)"
+      }
+    ]
+  }
+]

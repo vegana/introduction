@@ -1,0 +1,30 @@
+[
+  {
+    "type":"section",
+    "title":"Set Div Text Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api simply changes the text of a div and takes div id and a string as arguments."
+      },
+      {
+        "type":"code",
+        "string":"engine.set.div.text(project,'vegana js')"
+      }
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Set Div Style Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api simply changes the style of a div and takes div id and a style as a string as arguments."
+      },
+      {
+        "type":"code",
+        "string":"engine.set.div.text(project,'border:5px solid red;')"
+      }
+    ]
+  }
+]

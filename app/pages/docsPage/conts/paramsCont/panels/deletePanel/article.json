@@ -1,0 +1,20 @@
+[
+  {
+    "type":"section",
+    "title":"Delete Params Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api takes the params id as a string for argument and deletes the param if it exists."
+      },
+      {
+        "type":"code",
+        "string":"https://example.com/articles?id='213124uyh' //before<br>https://example.com/articles //after"
+      },
+      {
+        "type":"code",
+        "string":"engine.params.delete('id')"
+      }
+    ]
+  }
+]

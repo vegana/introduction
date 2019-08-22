@@ -1,0 +1,32 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Cont Router",
+    "items":[
+      {
+        "type":"para",
+        "string":"Conts module can be routed within the cont router which is to be defined on each page. the router api routes the cont on the router of the active page or the page you last routed to. the api takes pageId and class as arguments class is optional and there is no default provided."
+      },
+      {
+        "type":"code",
+        "string":"engine.router.init.conts(pageId,'cont-router-class #optional')"
+      },
+      {
+        "type":"para",
+        "string":"now conts can be routed within this router by using the following api."
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.to.cont(mod,{test:true})"
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.new.cont(mod,{test:true})"
+      },
+      {
+        "type":"para",
+        "string":"here the given mod is the module which can be fetched by the get api,you will read about it ahead. any data can be passed and be taken in the init function of the cont module as an argument after the predefined agruments of the function."
+      },
+    ]
+  }
+]

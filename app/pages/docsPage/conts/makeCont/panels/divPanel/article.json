@@ -1,0 +1,30 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Make Div",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api makes a div container inside a parent div and takes the following arguments. the function given is triggered when is clicked. the id generated will be a sum of all the given ids of all the parent div's."
+      },
+      {
+        "type":"code",
+        "json":{
+          "id":"whatever-box",
+          "parent":"parent-cont-id",
+          "class":"whatever-class",
+          "text":"this is a test div",
+          "style":"display:none;"
+        }
+      },
+      {
+        "type":"code",
+        "string":"const divId = engine.make.div(properties)"
+      },
+      {
+        "type":"code",
+        "string":"engine.view.show(divId)"
+      }
+    ]
+  }
+]

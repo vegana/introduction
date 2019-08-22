@@ -1,0 +1,17 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Validation Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api emply takes email as a stirng as an arguments and validates it to be a valid email format."
+      },
+      {
+        "type":"code",
+        "string":"const validate = engine.validate.email('gzbakku@gmail.com')"
+      }
+    ]
+  }
+
+]

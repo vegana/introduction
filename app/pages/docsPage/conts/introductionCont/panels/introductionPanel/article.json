@@ -1,0 +1,59 @@
+[
+  {
+    "type":"section",
+    "title":"Welcome to the community.",
+    "items":[
+      {
+        "type":"para",
+        "string":"Vegana is a js framework to build single page apps with native support of a defined document structure for ease of developemnt in big teams, code sharing, native and fast lazyness for a smooth browsing experience and native js web api plugins for ease of use and faster development speeds.basic concept is to reduce final bundle size and break the bundle based on a document structure making the browsing experience smooth and fast."
+      },
+      {
+        "type":"list",
+        "items":[
+          "tiny and broken up document structure",
+          "native lazyness with super fast loading and web api plugins. ",
+          "native api framework support with rocket iron and wet.",
+          "only js and sass develoment enviorment to speed up development multitudes of time.",
+          "prebuilt native components and upcoming support for web compoenets.",
+          "defined code structure to make onboarding new devs easy for big teams.",
+          "native nodejs cli with cross platform support.",
+          "non defined sass data structure."
+        ]
+      },
+    ]
+  },
+  {
+    "type":"section",
+    "title":"When to use!",
+    "items":[
+      {
+        "type":"list",
+        "items":[
+          "if your project is big and you need the website to load in under a sec.",
+          "if you have a big team and want to develop something fast with easy of dev onboarding",
+          "if your project is with multiple use heavy pages.",
+          "if your project use an api.",
+          "if you dont want breaking changes in upcoming updates in app or in cli.",
+          "if you have prebuilt sass or css style sheet."
+        ]
+      },
+    ]
+  },
+  {
+    "type":"section",
+    "title":"Before you start",
+    "items":[
+      {
+        "type":"list",
+        "items":[
+          "please get yourself familiar with atleast js css and sass.",
+          "get a little bit familiar with concepts of js api's, npm libraries, size of final bundle and component laziness.",
+          "get familier with nodejs and npm.",
+          "installing npm module as a global app.",
+          "efficiency of js data structures.",
+          "read the document structure docs."
+        ]
+      }
+    ]
+  }
+]

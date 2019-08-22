@@ -1,0 +1,32 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Comps Router",
+    "items":[
+      {
+        "type":"para",
+        "string":"Comps router can be initiated anywhere in the document structure and can route the comp module the arguments that the pia takes are parent, module data and class where data and class arguments are optional."
+      },
+      {
+        "type":"code",
+        "string":"engine.router.init.comps(contId,testCompModule,null,null)"
+      },
+      {
+        "type":"para",
+        "string":"now comps can be routed within this router by using the following api which takes module data and routerId as arguments where data is optional but to be passed as null if nothing else is being passed as data."
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.to.comp(compModule,null,routerId)"
+      },
+      {
+        "type":"code",
+        "string":"engine.router.navigate.new.comp(compModule,null,routerId)"
+      },
+      {
+        "type":"para",
+        "string":"here the given module cannot be fetched until and unless is a global comp but to be required within the parent module and provided when needed to the navigation api for routing."
+      },
+    ]
+  }
+]

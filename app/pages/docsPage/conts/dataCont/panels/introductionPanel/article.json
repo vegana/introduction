@@ -1,0 +1,12 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Data Apis",
+    "items":[
+      {
+        "type":"para",
+        "string":"data apis are a set of warppers around the functions of the in browser storage or session and local storage of the browser. these apis enhance the storage experience by adding mem storage with data protection layer and easy apis."
+      }
+    ]
+  }
+]

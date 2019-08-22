@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Value Binder Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is very straight forward it takes id as a arguments and returns the unfiltered value of a any dom element."
+      },
+      {
+        "type":"code",
+        "text":"const value = engine.binder.value(input_element_id)"
+      }
+    ]
+  }
+]

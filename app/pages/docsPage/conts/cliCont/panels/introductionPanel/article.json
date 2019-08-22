@@ -1,0 +1,26 @@
+[
+  {
+    "type":"section",
+    "title":"Vegana Cli",
+    "items":[
+      {
+        "type":"para",
+        "string":"Vegana cli is a nodejs based cli app and gives a cross platform uniform experience. the goal with cli was to make a fast developement enviorment by doing all the heavy lifting like live reloading, final app building and optimization image optimization ,component generation and inbuilt server for development."
+      },
+      {
+        "type":"title",
+        "level":2,
+        "string":"features"
+      },
+      {
+        "type":"list",
+        "items":[
+          "Inbuilt Server with Live Reloading",
+          "Live sass compilation",
+          "Native app building and code and image optimization.",
+          "Fast Component generation and auto lazy componet integration."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "type":"section",
+    "title":"Text Binder Api",
+    "items":[
+      {
+        "type":"para",
+        "string":"this api is very straight forward it takes id as a arguments and returns a string if is available or elese it returns false as a boolean. this api only binds the input dom element."
+      },
+      {
+        "type":"code",
+        "text":"const string = engine.binder.text(input_element_id)"
+      }
+    ]
+  }
+]
